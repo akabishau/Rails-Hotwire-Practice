@@ -1,8 +1,10 @@
 <main class="container">
-  <%#  why sanitize? %>
   <%= link_to sanitize("&larr; Back to quote"), quote_path(@quote) %>
   <div class="header">
     <h1>Edit quote</h1>
   </div>
-  <%= render "form", quote: @quote %>
+  <%# dom_id(@quote) - unique id%>
+  <%= turbo_frame_tag @quote do %>
+    <%= render "form", quote: @quote %>
+  <% end %>
 </main>

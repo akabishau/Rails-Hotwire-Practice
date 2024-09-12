@@ -1,0 +1,5 @@
+<%#  update turbo_frame with id "quotes" %>
+<%= turbo_stream.prepend "quotes", partial: "quotes/quote", locals: { quote: @quote } %>
+
+<%#  update turbo_frame with id "new_quote" %>
+<%= turbo_stream.update Quote.new, "" %>

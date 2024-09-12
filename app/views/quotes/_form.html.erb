@@ -5,5 +5,7 @@
     </div>
   <% end %>
   <%= f.input :name, input_html: { autofocus: true } %>
+  <%= link_to "Cancel", quotes_path, class: "btn btn--light" %>
+  <%# can pass custom name arg: quote.new_record? ? "Add" : "Update"%>
   <%= f.submit class: "btn btn--secondary" %>
 <% end %>
